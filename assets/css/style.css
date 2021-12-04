@@ -11120,6 +11120,12 @@ textarea.form-control-lg {
 }
 body {
   background-image: linear-gradient(to right, #000000 0%, #002b4d 100%);
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid {
+  padding: 0px;
 }
 
 .navbar {
@@ -11202,7 +11208,6 @@ body {
 .intro .glass {
   background-color: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(70px);
-  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   z-index: 2;
   position: relative;
   margin: 0px;
@@ -11237,12 +11242,17 @@ body {
 .intro .social a {
   text-decoration: none;
 }
+.intro .ico:hover {
+  filter: brightness(150%);
+}
 .intro .frame {
+  display: block;
   border: #a3a3a3 solid 1px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 @media (max-width: 767.98px) {
   .intro .frame {
@@ -11346,12 +11356,40 @@ body {
 
 .skills {
   padding: 0px;
+  height: 700px;
 }
 .skills .d-flex {
   align-items: center;
 }
+.skills .heading-line::before {
+  content: "";
+  width: 70%;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(218, 175, 32, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+.skills .heading-line::after {
+  content: "";
+  width: 5%;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: rgba(218, 175, 32, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+.skills .firs-col {
+  margin: 5rem auto 0 auto;
+}
 .skills .list {
-  padding: 0 20%;
+  color: rgba(218, 175, 32, 0.3);
+  padding: 0 10%;
+  margin: 0px;
+  z-index: 1000;
+  position: relative;
 }
 @media (max-width: 767.98px) {
   .skills .list {
@@ -11359,10 +11397,15 @@ body {
   }
 }
 .skills .list .badge {
+  height: auto;
   width: 40%;
-  margin: 10px;
+  margin: 0.5rem 5%;
   background-color: #ffffff00;
-  border: black solid 2px;
+  border: rgba(218, 175, 32, 0.3) solid 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+.skills .list .badge:hover {
+  filter: grayscale(20);
 }
 .skills .list #css {
   padding: 0px;
@@ -11373,13 +11416,78 @@ body {
 .skills .list #js {
   padding: 0px;
 }
+.skills .list #bootstrap {
+  padding: 0px;
+}
+.skills .list #jquery {
+  padding: 10px;
+}
+.skills .list #wordpress {
+  padding: 0px;
+}
+.skills .list #apsh {
+  padding: 0px;
+}
+.skills .list #ai {
+  padding: 0px;
+}
 .skills .glass {
   background-color: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(70px);
+  height: 800px;
   z-index: 2;
   position: relative;
   margin: 0px;
   padding: 0px;
+}
+@media (min-height: 1150px) {
+  .skills .glass {
+    height: 900px;
+  }
+}
+.skills .glass .shade {
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: linear-gradient(90deg, #000304 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 3;
+  padding: 0px;
+  margin: 0px;
+}
+.skills .circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+@media (max-width: 767.98px) {
+  .skills .circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+.skills #circle-1 {
+  background-color: chartreuse;
+  top: 113%;
+  left: -5%;
+}
+.skills #circle-2 {
+  background-color: crimson;
+  top: 125%;
+}
+.skills #circle-3 {
+  background-color: darkcyan;
+  top: 135%;
+  left: -10%;
+}
+.skills #circle-4 {
+  background-color: darkorange;
+  width: 200px;
+  height: 200px;
+  top: 130%;
+  right: 0%;
 }
 
 /*# sourceMappingURL=style.css.map */

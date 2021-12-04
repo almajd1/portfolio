@@ -1,7 +1,13 @@
 @use "../custom" as *;
 
+
 body{
     background-image: linear-gradient(to right, #000000 0%, #002b4d 100%);
+    padding: 0px;
+    margin: 0px;
+}
+.container-fluid{
+    padding: 0px;
 }
 
 .navbar{
@@ -89,8 +95,7 @@ body{
     .glass{
         background-color: rgba(255,255,255,0.13);
         backdrop-filter: blur(70px);
-        box-shadow: 0 0 40px rgba(8,7,16,0.6);
-        
+
         z-index: 2;
         position: relative;
         margin: 0px;
@@ -136,18 +141,25 @@ body{
     }
 
 
+    .ico{
 
+        &:hover{
+            filter: brightness(150%);
+
+        }
+    }
 
     .frame{
+        display: block;
         border: rgb(163, 163, 163) solid 1px;
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        //animation-name: frame-size;
-        //animation-duration: 2s;
         transform: translate(-50%, -50%);
-        @include media-breakpoint-down(md){
-            display: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        @include media-breakpoint-down(md){ 
+                display: none  
+            
         }
     }
 
@@ -258,4 +270,3 @@ body{
     transform: translate(50%, -50%);
     z-index: 500;
 }
-
