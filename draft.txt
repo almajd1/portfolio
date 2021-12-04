@@ -1,0 +1,32 @@
+<div class="row above-glass text-white">
+                  <div class="col-md-6 ">
+                    
+                      <h1 class="display-3">Hi, It's Almajd Shahin</h1>
+                      <p class="display-6">welcome to my Portfolio</p>
+                  </div>
+                  <div class="col-md-6"></div>
+            </div>
+
+
+
+
+
+            &::before{
+                        border: rgb(163, 163, 163) solid 1px;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        position: absolute;
+                        margin: auto;
+                        padding: 0px;
+                        line-height: 100px;
+                        display: inline;
+                        z-index: 1000;
+                        
+                    }
+                    &:hover{
+                        &::before{
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
